@@ -18,11 +18,10 @@
 /* Begin PBXFileReference section */
 		2EAD831D2266DFE0006932DC /* Dark Switch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Switch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EAD83202266DFE0006932DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2EAD83232266DFE0006932DC /* Swift_Toggle_Mode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swift_Toggle_Mode.xcdatamodel; sourceTree = "<group>"; };
 		2EAD83252266DFE1006932DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EAD83282266DFE1006932DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2EAD832A2266DFE1006932DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EAD832B2266DFE1006932DC /* Swift_Toggle_Mode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swift_Toggle_Mode.entitlements; sourceTree = "<group>"; };
+		2EAD832B2266DFE1006932DC /* Dark_Switch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dark_Switch.entitlements; sourceTree = "<group>"; };
 		2EAD83312266E049006932DC /* customScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customScript.swift; sourceTree = "<group>"; };
 		2EAD83332266E088006932DC /* customScript.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = customScript.applescript; sourceTree = "<group>"; };
 		2EAD83362266E143006932DC /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
@@ -64,8 +63,7 @@
 				2EAD83252266DFE1006932DC /* Assets.xcassets */,
 				2EAD83272266DFE1006932DC /* MainMenu.xib */,
 				2EAD832A2266DFE1006932DC /* Info.plist */,
-				2EAD832B2266DFE1006932DC /* Swift_Toggle_Mode.entitlements */,
-				2EAD83222266DFE0006932DC /* Swift_Toggle_Mode.xcdatamodeld */,
+				2EAD832B2266DFE1006932DC /* Dark_Switch.entitlements */,
 				2EAD83312266E049006932DC /* customScript.swift */,
 				2EAD83332266E088006932DC /* customScript.applescript */,
 			);
@@ -348,19 +346,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2EAD83222266DFE0006932DC /* Swift_Toggle_Mode.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2EAD83232266DFE0006932DC /* Swift_Toggle_Mode.xcdatamodel */,
-			);
-			currentVersion = 2EAD83232266DFE0006932DC /* Swift_Toggle_Mode.xcdatamodel */;
-			path = Swift_Toggle_Mode.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2EAD83152266DFE0006932DC /* Project object */;
 }
