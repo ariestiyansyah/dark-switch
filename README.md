@@ -2,6 +2,10 @@
 
 Easily switch dark mode in macOS mojave.
 
+- [x] [Sketch](assets) file for icon
+- [ ] Quit button [#1](https://github.com/ariestiyansyah/swift-toggle-mode/issues/1)
+- [ ] DMG Installer [#2](https://github.com/ariestiyansyah/swift-toggle-mode/issues/2)
+
 ## Preview
 
 ![](assets/animate.gif)
