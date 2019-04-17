@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusItem.button {
             initButton(button: button)
             button.action = #selector(setDarkMode(_:))
+            button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
     }
     
@@ -37,22 +38,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
-    func isDarkModeOn() -> Bool {
-        return customScript.desktopState
+    func isDarkModeOn(appearance: NSAppearance?) -> Bool {
+        if #available(macOS 10.14, *) {
+            let basicAppearance: NSAppearance.Name? = appearance?.bestMatch(from: [.aqua, .darkAqua])
+            return basicAppearance == .darkAqua
+        } else {
+            return false
+        }
     }
     
     @objc func setDarkMode(_ button:NSStatusBarButton){
-        if button.isDarkModeState() {
-            button.setLightMode()
-            customScript.darkModeOff()
+        let event = NSApp.currentEvent
+        if event?.type == NSEvent.EventType.rightMouseUp {
+            let menu = NSMenu()
+            menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+            let position = NSPoint(x: button.frame.origin.x, y: (button.frame.origin.y + 5 ) - (button.frame.height / 2))
+            menu.popUp(positioning: menu.item(at: 0), at: position, in: button.superview)
         }else{
-            button.setDarkMode()
-            customScript.darkModeOn()
+            if button.isDarkModeState() {
+                button.setLightMode()
+                customScript.darkModeOff()
+            }else{
+                button.setDarkMode()
+                customScript.darkModeOn()
+            }
         }
     }
     
     func initButton(button:NSStatusBarButton!) {
-        if isDarkModeOn() {
+        if isDarkModeOn(appearance: NSAppearance.current) {
             button.setDarkMode()
         }else{
             button.setLightMode()
