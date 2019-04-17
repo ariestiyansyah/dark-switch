@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2EAD83212266DFE0006932DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD83202266DFE0006932DC /* AppDelegate.swift */; };
-		2EAD83242266DFE0006932DC /* Swift_Toggle_Mode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD83222266DFE0006932DC /* Swift_Toggle_Mode.xcdatamodeld */; };
 		2EAD83262266DFE1006932DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD83252266DFE1006932DC /* Assets.xcassets */; };
 		2EAD83292266DFE1006932DC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD83272266DFE1006932DC /* MainMenu.xib */; };
+		2EAD83322266E049006932DC /* customScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD83312266E049006932DC /* customScript.swift */; };
+		2EAD83342266E088006932DC /* customScript.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD83332266E088006932DC /* customScript.applescript */; };
+		2EAD83372266E143006932DC /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAD83362266E143006932DC /* AppleScriptObjC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		2EAD83282266DFE1006932DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2EAD832A2266DFE1006932DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EAD832B2266DFE1006932DC /* Swift_Toggle_Mode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swift_Toggle_Mode.entitlements; sourceTree = "<group>"; };
+		2EAD83312266E049006932DC /* customScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customScript.swift; sourceTree = "<group>"; };
+		2EAD83332266E088006932DC /* customScript.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = customScript.applescript; sourceTree = "<group>"; };
+		2EAD83362266E143006932DC /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EAD83372266E143006932DC /* AppleScriptObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +45,7 @@
 			children = (
 				2EAD831F2266DFE0006932DC /* Swift Toggle Mode */,
 				2EAD831E2266DFE0006932DC /* Products */,
+				2EAD83352266E143006932DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +66,18 @@
 				2EAD832A2266DFE1006932DC /* Info.plist */,
 				2EAD832B2266DFE1006932DC /* Swift_Toggle_Mode.entitlements */,
 				2EAD83222266DFE0006932DC /* Swift_Toggle_Mode.xcdatamodeld */,
+				2EAD83312266E049006932DC /* customScript.swift */,
+				2EAD83332266E088006932DC /* customScript.applescript */,
 			);
 			path = "Swift Toggle Mode";
+			sourceTree = "<group>";
+		};
+		2EAD83352266E143006932DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD83362266E143006932DC /* AppleScriptObjC.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +112,11 @@
 				TargetAttributes = {
 					2EAD831C2266DFE0006932DC = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -133,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EAD83242266DFE0006932DC /* Swift_Toggle_Mode.xcdatamodeld in Sources */,
+				2EAD83322266E049006932DC /* customScript.swift in Sources */,
+				2EAD83342266E088006932DC /* customScript.applescript in Sources */,
 				2EAD83212266DFE0006932DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +294,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Swift Toggle Mode/Swift_Toggle_Mode.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B6Q4JPWC46;
@@ -290,7 +312,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Swift Toggle Mode/Swift_Toggle_Mode.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B6Q4JPWC46;

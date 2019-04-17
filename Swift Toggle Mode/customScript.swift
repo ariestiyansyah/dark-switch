@@ -6,4 +6,10 @@
 //  Copyright © 2019 ONTO. All rights reserved.
 //
 
-import Foundation
+import Cocoa
+
+@objc(NSObject) protocol customScript {
+    var desktopState: Bool { get }
+    func darkModeOn()
+    func darkModeOff()
+}
