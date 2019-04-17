@@ -1,27 +1,28 @@
-# Swift Toggle Mode
+# Dark Switch
 
 Easily switch dark mode in macOS mojave.
-
-- [x] [Sketch](assets) file for icon
-- [ ] Quit button [#1](https://github.com/ariestiyansyah/swift-toggle-mode/issues/1)
-- [ ] DMG Installer [#2](https://github.com/ariestiyansyah/swift-toggle-mode/issues/2)
 
 ## Preview
 
 ![](assets/animate.gif)
 
+## Usage
 
-## How To
+Download the latest build in [release page](https://github.com/ariestiyansyah/dark-switch/releases/tag/v1.0) and install it in your MacOS Mojave.
+
+
+## Contribute
 
 Required: 
-- Xcode Version 10.2
+- Xcode Version 10.x
 - Swift 4 or 5
+- AppleScriptObj Framework
 
 Clone this repository
 
 ```
-$ git clone git@github.com:ariestiyansyah/swift-toggle-mode.git
+$ git clone git@github.com:ariestiyansyah/dark-switch.git
 ```
 
-Open `Swift Toggle Mode.xcodeproj` file using Xcode, Build and Run
+Open `Swift Toggle Mode.xcodeproj` file using Xcode, Develop, Build and Run
 
